@@ -19,7 +19,7 @@ const routes = [
 const NavBar = () => {
     const [open,setOpen] = useState(false)
   return (
-    <nav>
+    <nav className="bg-white p-2 text-black">
         <div className="md:hidden text-2xl " onClick={()=>setOpen(!open)}>
         {
             open===true? <IoMdClose></IoMdClose> :
@@ -29,7 +29,9 @@ const NavBar = () => {
          
         </div>
        
-      <ul className="md:flex gap-6">
+      <ul className={`md:flex gap-6 text-black bg-white rounded-lg p-2  duration-1000
+        ${open?'top-16':'-top-64'}
+        absolute md:static`}>
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}

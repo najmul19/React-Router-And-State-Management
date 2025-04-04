@@ -1,7 +1,7 @@
 const Link = ({route}) => {
   return (
     <div>
-      <li>
+      <li className="hover:bg-gray-300 ">
         <a href={route.pathName}>{route.name}</a>
       </li>
     </div>
